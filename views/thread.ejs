@@ -1,0 +1,46 @@
+<% include ./partials/header.ejs %>
+
+<div
+    class="header h-14 border-white-2 flex flex-row items-center shadow-md fixed top-0 left-0 w-full z-10 bg-red-400">
+
+    <img src="/images/logo.svg" alt="logo">
+    <h2 class="font-bold text-lg text-purple-600 font-poppins">Snapnest</h2>
+
+    <div class="flex flex-row gap-2 ml-auto mr-4">
+        <a href="/" class="mt-2 px-5 py-2 text-sm font-semibold">Home</a>
+        <a href="/feed" class="mt-2 px-5 py-2 text-sm font-semibold">Feed</a>
+        <a href="/logout" class="mt-2 px-5 py-2 bg-red-600 rounded-md text-sm font-semibold">Logout</a>
+    </div>
+
+</div>
+
+<!-- Background Container -->
+<div class="bg-[url('https://i.pinimg.com/1200x/b4/91/a5/b491a504a2c5714dc218349d7c8632ca.jpg')]
+        bg-cover bg-center h-screen w-full flex justify-center items-start pt-28">
+
+    <!-- Main Box -->
+    <div class="box w-200 h-auto bg-white bg-opacity-80 border-2 rounded-md p-6 flex flex-col items-center">
+
+        <div class="cont1 flex flex-col items-center">
+            <img src="/images/uploads/<%= elem.image %>" alt="image" class="w-auto max-h-[400px] object-contain">
+
+            <h3 class="mt-4 text-xl font-semibold">
+                <%= elem.title %>
+            </h3>
+
+            <h4 class="text-sm text-gray-700">
+                Posted by: <%= elem.user.username %>
+            </h4>
+        </div>
+
+        <div class="cont2 mt-4">
+            <p class="text-md">
+                <%= elem.description %>
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+<% include ./partials/footer.ejs %>

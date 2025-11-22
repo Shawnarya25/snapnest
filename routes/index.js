@@ -60,6 +60,13 @@ router.get('/feed', isLoggedIn, async function (req, res, next) {
 
   res.render('feed', { user: user, posts: posts });
 });
+router.get('/thread/:id', isLoggedIn, async function (req, res, next) {
+  const user = await userModel.findOne({ username: req.session.passport.user })
+  const posts = await postModel.findById(req.params.id)
+    .populate("user")
+
+  res.render('thread', { user: user, elem: posts });
+});
 
 // Register user
 router.post('/register', function (req, res) {
