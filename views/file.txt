@@ -1,0 +1,53 @@
+<div class="card flex flex-col bg-white items-center justify-center p-4">
+                    <div class="w-42 h-30 bg-white rounded-sm">
+                        <img src="https://i.pinimg.com/1200x/55/6f/18/556f1846d1b3c489bf9ceb5a726250b2.jpg"
+                            alt="Sample Pin" class="w-full h-full rounded-sm object-cover" />
+                    </div>
+                    <h4 class="text-lg font-semibold font-poppins">Spiderman</h4>
+                    <h5 class="text-xs font-bold">Pins</h5>
+                </div>
+
+                <div class="card flex flex-col bg-white items-center justify-center p-4">
+                    <div class="w-42 h-30 bg-white rounded-sm">
+                        <img src="https://i.pinimg.com/736x/af/96/c8/af96c81276cc8912688676586dbfe61f.jpg"
+                            alt="Sample Pin" class="w-full h-full rounded-sm object-cover" />
+                    </div>
+                    <h4 class="text-lg font-semibold font-poppins">Loki</h4>
+                    <h5 class="text-xs font-bold">Pins</h5>
+                </div>
+
+                <div class="card flex flex-col bg-white items-center justify-center  p-4">
+                    <div class="w-42 h-30 bg-white rounded-sm">
+                        <img src="https://i.pinimg.com/736x/3e/26/2d/3e262dc490b9cd99b7e923ec9845cb06.jpg"
+                            alt="Sample Pin" class="w-full h-full rounded-sm object-cover" />
+                    </div>
+                    <h4 class="text-lg font-semibold font-poppins">Strange</h4>
+                    <h5 class="text-xs font-bold">Pins</h5>
+                </div>
+
+                <div class="card flex flex-col bg-white items-center justify-center  p-4">
+                    <div class="w-42 h-30 bg-white rounded-sm">
+                        <img src="https://i.pinimg.com/736x/22/96/1e/22961efa0faa5b5211a23119ae269182.jpg"
+                            alt="Sample Pin" class="w-full h-full rounded-sm object-cover" />
+                    </div>
+                    <h4 class="text-lg font-semibold font-poppins">Thor</h4>
+                    <h5 class="text-xs font-bold">Pins</h5>
+                </div>
+
+                <div class="card flex flex-col bg-white items-center justify-center p-4">
+                    <div class="w-42 h-30 bg-white rounded-sm">
+                        <img src="https://i.pinimg.com/736x/ca/04/34/ca04344c66bc063a19ca11466939c128.jpg"
+                            alt="Sample Pin" class="w-full h-full rounded-sm object-cover" />
+                    </div>
+                    <h4 class="text-lg font-semibold font-poppins">Panther</h4>
+                    <h5 class="text-xs font-bold">Pins</h5>
+                </div>
+
+                <div class="card flex flex-col bg-white items-center justify-center p-4">
+                    <div class="w-42 h-30 bg-white rounded-sm">
+                        <img src="https://i.pinimg.com/736x/2f/16/8a/2f168a1690dfe7202fe7e035b4600c23.jpg"
+                            alt="Sample Pin" class="w-full h-full rounded-sm object-cover" />
+                    </div>
+                    <h4 class="text-lg font-semibold font-poppins">Wolverine</h4>
+                    <h5 class="text-xs font-bold">Pins</h5>
+                </div>

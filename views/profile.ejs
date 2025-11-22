@@ -1,0 +1,82 @@
+<% include ./partials/header.ejs %>
+    <div class="profile relative w-full min-h-screen text-black pt-1">
+        <form id="uploadform" hidden action="/fileupload" method="post" enctype="multipart/form-data">
+            <input type="file" name="image">
+        </form>
+        <div
+            class="absolute inset-0 bg-[url('https://i.pinimg.com/1200x/b4/91/a5/b491a504a2c5714dc218349d7c8632ca.jpg')] bg-cover bg-center opacity-50">
+        </div>
+
+        <!-- Content -->
+        <div
+            class="header h-14 border-white-2 flex flex-row items-center shadow-md fixed top-0 left-0 w-full z-10 bg-red-400">
+            <img src="/images/logo.svg" alt="logo">
+            <h2 class="font-bold text-lg text-purple-600 font-poppins">Snapnest</h2>
+
+            <div class="flex flex-row gap-2 ml-auto mr-4">
+                <a href="/" class="mt-2 px-5 py-2  text-sm font-semibold">Home</a>
+                <a href="/feed" class="mt-2 px-5 py-2  text-sm font-semibold">Feed</a>
+                <a href="/register" class="mt-2 px-5 py-2 bg-red-600 rounded-md text-sm font-semibold">Logout</a>
+            </div>
+
+        </div>
+
+        <div class="relative z-10">
+            <div class="profdets flex flex-col items-center mt-20">
+                <div class="relative">
+                    <div class="w-32 h-32 rounded-full">
+                        <img src="/images/uploads/<%= user.profileimage %>" alt="Profile Picture"
+                            class="w-full h-full rounded-full object-cover" />
+                    </div>
+                    <span id="uploadicon"
+                        class="w-10 h-10 absolute rounded-full right-0 bottom-0 bg-gray-200 flex justify-center items-center cursor-pointer">
+                        <i class="ri-pencil-line"></i>
+                    </span>
+                </div>
+                <h1 class="text-3xl font-semibold font-poppins mt-2"><%= user.name %></h1>
+                <h2 class="text-base font-bold font-poppins"><%= user.username %></h2>
+                <div class="flex flex-row gap-2">
+                    <a href="/add" class="mt-2 px-5 py-2 bg-yellow-700 rounded-md text-xs font-semibold">Add new
+                        post</a>
+                    <a href="/show" class="mt-2 px-5 py-2 bg-yellow-300 rounded-md text-xs font-semibold">Posts</a>
+
+                </div>
+            </div>
+            <div class="flex flex-col items-center">
+                <div class="w-80 h-90 bg-white bg-opacity-50 border-2 rounded-2xl shadow-md flex flex-col items-center p-6 mt-6">
+                    <!-- Post card area -->
+                    <div class="cards flex flex-col items-center justify-center">
+
+                        <div class="w-34 h-30 bg-white rounded-md shadow-sm p-2 flex justify-center items-center">
+                            <img src="/images/uploads/<%= user?.posts[0]?.image %>" alt="Sample Pin"
+                                class="w-full h-full object-cover rounded-md" />
+                        </div>
+
+                        <a href="/show" class="text-sm font-semibold font-poppins mt-2">Your Posts</a>
+                        <h5 class="text-xs font-bold">
+                            <%= user.posts.length %> Post
+                        </h5>
+                    </div>
+
+                    <!-- Text box area -->
+                    <textarea
+                        class="mt-6 w-full h-48 p-4 rounded-md bg-white shadow-md resize-none font-poppins placeholder-gray-600"
+                        placeholder="Write something about yourself..."></textarea>
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </div>
+    </div>
+    <script>
+        document.querySelector("#uploadicon").addEventListener("click", function () {
+            document.querySelector("#uploadform input").click();
+        });
+        document.querySelector("#uploadform input").addEventListener("change", function () {
+            document.querySelector("#uploadform").submit();
+        });
+    </script>
+    <% include ./partials/footer.ejs %>
